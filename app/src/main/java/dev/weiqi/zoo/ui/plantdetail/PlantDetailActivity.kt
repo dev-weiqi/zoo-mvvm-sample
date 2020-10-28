@@ -7,10 +7,10 @@ import android.view.MenuItem
 import androidx.core.os.bundleOf
 import dev.weiqi.zoo.R
 import dev.weiqi.zoo.bean.PlantDetailBean
-import dev.weiqi.zoo.testtool.argsOrDefault
-import dev.weiqi.zoo.testtool.loadWithLoader
-import dev.weiqi.zoo.testtool.vertical
-import dev.weiqi.zoo.required
+import dev.weiqi.zoo.extension.argsOrDefault
+import dev.weiqi.zoo.extension.loadWithLoader
+import dev.weiqi.zoo.extension.vertical
+import dev.weiqi.zoo.common.required
 import dev.weiqi.zoo.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_plant_detail.*
 
@@ -69,8 +69,6 @@ class PlantDetailActivity : BaseActivity() {
         recyclerView.vertical(adapter)
         adapter.submitList(plantInfoBeanList.toList())
 
-        imgView.loadWithLoader(imgUrl) {
-            availableMemoryPercentage(0.1)
-        }
+        imgView.loadWithLoader(imgUrl)
     }
 }

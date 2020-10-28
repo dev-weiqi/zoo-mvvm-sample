@@ -8,7 +8,7 @@ import coil.api.clear
 import dev.weiqi.zoo.R
 import dev.weiqi.zoo.bean.PlantInfoBean
 import dev.weiqi.zoo.component.singleClick
-import dev.weiqi.zoo.testtool.loadWithLoader
+import dev.weiqi.zoo.extension.loadWithLoader
 import dev.weiqi.zoo.network.dto.response.PlantInfoRespDto
 import dev.weiqi.zoo.network.dto.response.toBean
 import dev.weiqi.zoo.ui.base.BaseAdapter
@@ -55,7 +55,7 @@ class PlantInfoAdapter : BaseAdapter<PlantInfoBean, BaseAdapter.ViewHolder<Plant
         private val tvAlias: TextView = itemView.tvAlias
 
         override fun bindTo(data: PlantInfoBean) {
-            imgView.loadWithLoader(data.imgUrl) { availableMemoryPercentage(0.1) }
+            imgView.loadWithLoader(data.imgUrl)
             tvName.text = data.name
             tvAlias.text = data.alias
 

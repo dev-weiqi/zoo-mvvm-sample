@@ -8,7 +8,7 @@ import coil.api.clear
 import dev.weiqi.zoo.R
 import dev.weiqi.zoo.bean.AreaInfoBean
 import dev.weiqi.zoo.component.singleClick
-import dev.weiqi.zoo.testtool.loadWithLoader
+import dev.weiqi.zoo.extension.loadWithLoader
 import dev.weiqi.zoo.ui.base.BaseAdapter
 import kotlinx.android.synthetic.main.item_area_info.view.*
 
@@ -28,9 +28,7 @@ class AreaInfoAdapter : BaseAdapter<AreaInfoBean, AreaInfoAdapter.ViewHolder>() 
         private val tvOpenDayInfo: TextView = itemView.tvOpenDayInfo
 
         override fun bindTo(data: AreaInfoBean) {
-            imgView.loadWithLoader(data.imgUrl) {
-                availableMemoryPercentage(0.1)
-            }
+            imgView.loadWithLoader(data.imgUrl)
 
             tvTitle.text = data.name
             tvSubtitle.text = data.desc

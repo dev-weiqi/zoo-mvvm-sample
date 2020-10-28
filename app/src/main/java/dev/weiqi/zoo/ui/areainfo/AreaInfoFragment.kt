@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import dev.weiqi.zoo.R
 import dev.weiqi.zoo.bean.AreaInfoBean
-import dev.weiqi.zoo.testtool.observeNonNull
-import dev.weiqi.zoo.testtool.vertical
+import dev.weiqi.zoo.extension.observeNonNull
+import dev.weiqi.zoo.extension.vertical
 import dev.weiqi.zoo.model.State
 import dev.weiqi.zoo.ui.areadetail.AreaDetailActivity
 import dev.weiqi.zoo.util.ToastUtil
@@ -40,9 +40,6 @@ class AreaInfoFragment : Fragment(R.layout.fragment_area_info) {
         loadingDialog = LoadingDialog(requireContext())
 
         viewModel.run {
-//            isLoading.observeNonNull(viewLifecycleOwner) {
-//                if (it) loadingDialog?.show() else loadingDialog?.dismiss()
-//            }
             areaInfoBeanList.observeNonNull(viewLifecycleOwner, ::handleAreaInfoBeanList)
 
             requestAreaInfoBeanList()
@@ -67,6 +64,7 @@ class AreaInfoFragment : Fragment(R.layout.fragment_area_info) {
 
     private fun handleAreaInfoBeanList(state: State<List<AreaInfoBean>>) {
         when (state) {
+            is State.Loading -> if (state.show) loadingDialog?.show() else loadingDialog?.hide()
             is State.Empty, is State.Error -> ToastUtil.short(getString(R.string.empty_data))
             is State.Success -> {
                 val list = state.data

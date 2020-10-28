@@ -21,7 +21,6 @@ sealed class State<out T> {
         fun loading(show: Boolean) = Loading(show)
         fun <T> successOrEmpty(list: List<T>) = if (list.isEmpty()) Empty else Success(list)
 
-
         @VisibleForTesting
         fun <T> State<T>.isSuccessfully(expected: T) = this is Success && this.data == expected
 

@@ -6,7 +6,7 @@ import dev.weiqi.zoo.bean.AreaInfoBean
 import dev.weiqi.zoo.bean.PlantInfoBean
 import dev.weiqi.zoo.component.FlowDownloader
 import dev.weiqi.zoo.component.Progress
-import dev.weiqi.zoo.const.Const
+import dev.weiqi.zoo.constant.Const
 import dev.weiqi.zoo.network.api.ApiService
 import dev.weiqi.zoo.network.dto.response.toBeanList
 import dev.weiqi.zoo.repository.RemoteRepository

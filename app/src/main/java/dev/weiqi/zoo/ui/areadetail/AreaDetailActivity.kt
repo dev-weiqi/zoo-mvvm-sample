@@ -15,12 +15,12 @@ import dev.weiqi.zoo.bean.PlantDetailBean
 import dev.weiqi.zoo.bean.PlantInfoBean
 import dev.weiqi.zoo.component.Launcher
 import dev.weiqi.zoo.component.singleClick
-import dev.weiqi.zoo.testtool.argsOrDefault
-import dev.weiqi.zoo.testtool.loadWithLoader
-import dev.weiqi.zoo.testtool.observeNonNull
-import dev.weiqi.zoo.testtool.vertical
 import dev.weiqi.zoo.model.State
-import dev.weiqi.zoo.required
+import dev.weiqi.zoo.common.required
+import dev.weiqi.zoo.extension.argsOrDefault
+import dev.weiqi.zoo.extension.loadWithLoader
+import dev.weiqi.zoo.extension.observeNonNull
+import dev.weiqi.zoo.extension.vertical
 import dev.weiqi.zoo.ui.areadetail.plantinfo.PlantInfoAdapter
 import dev.weiqi.zoo.ui.base.BaseActivity
 import dev.weiqi.zoo.ui.plantdetail.PlantDetailActivity
@@ -79,9 +79,7 @@ class AreaDetailActivity : BaseActivity() {
     private fun initView() {
         loadingDialog = LoadingDialog(this)
 
-        imgView.loadWithLoader(areaInfoBean.imgUrl) {
-            availableMemoryPercentage(0.1)
-        }
+        imgView.loadWithLoader(areaInfoBean.imgUrl)
 
         tvDesc.text = areaInfoBean.desc
         tvLink.singleClick {
@@ -131,9 +129,9 @@ class AreaDetailActivity : BaseActivity() {
     private fun initViewModel() {
         val lifecycleOwner = this
         viewModel.run {
-//            isLoading.observeNonNull(lifecycleOwner) { if (it) loadingDialog?.show() else loadingDialog?.dismiss() }
             plantInfoBeanList.observeNonNull(lifecycleOwner) { state ->
                 when (state) {
+                    is State.Loading -> if (state.show) loadingDialog?.show() else loadingDialog?.hide()
                     is State.Empty, is State.Error -> ToastUtil.short(getString(R.string.empty_data))
                     is State.Success -> adapter.submitList(state.data)
                 }

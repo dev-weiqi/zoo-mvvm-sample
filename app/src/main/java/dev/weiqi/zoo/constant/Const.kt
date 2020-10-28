@@ -1,4 +1,4 @@
-package dev.weiqi.zoo.const
+package dev.weiqi.zoo.constant
 
 object Const {
 

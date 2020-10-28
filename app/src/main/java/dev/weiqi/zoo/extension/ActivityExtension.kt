@@ -1,4 +1,4 @@
-package dev.weiqi.zoo.testtool
+package dev.weiqi.zoo.extension
 
 import android.app.Activity
 import android.content.Context
@@ -11,8 +11,4 @@ inline fun <reified T> Activity.argsOrDefault(
     crossinline defValue: () -> T
 ) = lazy {
     intent?.extras?.get(key) as? T ?: defValue()
-}
-
-fun Context.inflate(@LayoutRes resId: Int): View {
-    return LayoutInflater.from(this).inflate(resId, null)
 }
