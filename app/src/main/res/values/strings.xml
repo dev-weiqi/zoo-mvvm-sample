@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ZOO</string>
+    <string name="zoo">台北市立動物園</string>
+    <string name="empty_data">暫無資料</string>
+    <string name="open_url">在網頁中開啟</string>
+    <string name="alias">別名</string>
+    <string name="intro">簡介</string>
+    <string name="feature">辨認方式</string>
+    <string name="function">功能性</string>
+    <string name="last_update">最後更新</string>
+    <string name="plant_info">植物資料</string>
+    <string name="plz_wait">處理中，請稍候</string>
+    <string name="image_transition_name" translatable="false">image-transition-name</string>
+</resources>

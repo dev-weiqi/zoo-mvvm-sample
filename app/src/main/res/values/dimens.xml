@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="divider">1dp</dimen>
+
+    <dimen name="common_m1">4dp</dimen>
+    <dimen name="common_m2">8dp</dimen>
+    <dimen name="common_m3">12dp</dimen>
+    <dimen name="common_m4">16dp</dimen>
+    <dimen name="common_m5">20dp</dimen>
+    <dimen name="common_m6">24dp</dimen>
+    <dimen name="common_m7">28dp</dimen>
+    <dimen name="common_m8">32dp</dimen>
+    <dimen name="common_m9">36dp</dimen>
+    <dimen name="common_m10">40dp</dimen>
+
+    <dimen name="font_text_xl">20sp</dimen>
+    <dimen name="font_text_l">18sp</dimen>
+    <dimen name="font_text_m">16sp</dimen>
+    <dimen name="font_text_s">14sp</dimen>
+
+    <dimen name="area_info_item_height">120dp</dimen>
+    <dimen name="plant_info_item_height">120dp</dimen>
+</resources>

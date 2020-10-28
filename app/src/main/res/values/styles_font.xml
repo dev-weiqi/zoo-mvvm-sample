@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="normal_black_s" parent="@style/normal_s">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="normal_black_m" parent="@style/normal_m">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="normal_black_l" parent="@style/normal_l">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="normal_white_l" parent="@style/normal_l">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="bold_black_s" parent="@style/bold_s">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="bold_black_m" parent="@style/bold_m">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="bold_black_l" parent="@style/bold_l">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="bold_white_xl" parent="@style/bold_xl">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

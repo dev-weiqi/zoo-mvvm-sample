@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="font_normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="font_bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="normal_xl" parent="@style/font_normal">
+        <item name="android:textSize">@dimen/font_text_xl</item>
+    </style>
+
+    <style name="normal_l" parent="@style/font_normal">
+        <item name="android:textSize">@dimen/font_text_l</item>
+    </style>
+
+    <style name="normal_m" parent="@style/font_normal">
+        <item name="android:textSize">@dimen/font_text_m</item>
+    </style>
+
+    <style name="normal_s" parent="@style/font_normal">
+        <item name="android:textSize">@dimen/font_text_s</item>
+    </style>
+
+    <style name="bold_xl" parent="@style/font_bold">
+        <item name="android:textSize">@dimen/font_text_xl</item>
+    </style>
+
+    <style name="bold_l" parent="@style/font_bold">
+        <item name="android:textSize">@dimen/font_text_l</item>
+    </style>
+
+    <style name="bold_m" parent="@style/font_bold">
+        <item name="android:textSize">@dimen/font_text_m</item>
+    </style>
+
+    <style name="bold_s" parent="@style/font_bold">
+        <item name="android:textSize">@dimen/font_text_s</item>
+    </style>
+</resources>
